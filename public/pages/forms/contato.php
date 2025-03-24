@@ -1,9 +1,9 @@
 <?php 
 require "../../../bootstrap.php";
 
-if(isEmpty()){ 
-    flash('message', 'Preencha todos os campos');
-    header("location:/?page=contato");
+if(isEmpty()){
+    flash('message', 'Preencha todos os campos!');
+    header('location:/?page=contato');
 }
 
 $validate = validate([
@@ -13,5 +13,5 @@ $validate = validate([
     'message' => 's',
 ]);
 
-dd($validate->name);
+send($validate);
 ?>

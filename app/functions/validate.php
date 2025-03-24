@@ -23,15 +23,17 @@ function validate(array $fields){
 }
 
 function isEmpty(){ 
-    $request = request(); 
+
+    $request = request();
     $empty = false;
 
-    foreach($request as $key){
+    foreach($request as $key => $value){
         if(empty($request[$key])){
-            $empty = true;
+           $empty = true;
         }
     }
     return $empty;
 }
+
 
 ?>
